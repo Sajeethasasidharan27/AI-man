@@ -19,7 +19,12 @@
       "dest": "/server/index.js"
     },
     {
-      "handle": "filesystem"
+      "src": "/static/(.*)",
+      "dest": "/client/build/static/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|svg|json))",
+      "dest": "/client/build/$1"
     },
     {
       "src": "/(.*)",
